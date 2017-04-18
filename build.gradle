@@ -1,0 +1,32 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'com.bmuschko.tomcat'
+apply plugin: 'com.bmuschko.tomcat-base'
+
+repositories {
+    jcenter()
+}
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.bmuschko:gradle-tomcat-plugin:2.2.4'
+    }
+}
+
+tomcatRun.outputFile = file('./tomcat-log.txt')
+tomcatRunWar.outputFile = file('./tomcat-log.txt')
+
+dependencies {
+    providedCompile 'javax:javaee-web-api:7.0'
+    compile 'org.slf4j:slf4j-api:1.7.12'
+    compile 'com.google.guava:guava:20.0'
+
+    testCompile 'junit:junit:4.12'
+
+    def tomcatVersion = '7.0.72'
+    tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
+           "org.apache.tomcat.embed:tomcat-embed-logging-juli:${tomcatVersion}",
+           "org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}"
+}
