@@ -20,5 +20,6 @@ java.lang.IllegalArgumentException: Invalid character found in the request targe
 
 ```bash
 $ gradle tomcatRunWar
+$ curl "http://localhost:8080/tomcat-gradle/hello?y=1|2"
 ```
 
