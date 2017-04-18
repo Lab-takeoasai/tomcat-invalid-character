@@ -7,6 +7,6 @@ import javax.servlet.annotation.*;
 public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        res.getWriter().print("Works fine!");
+        res.getWriter().print("<div id='fine'>Works fine!</div>");
     }
 }

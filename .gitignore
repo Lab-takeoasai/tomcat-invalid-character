@@ -1,3 +1,7 @@
 build/
 .gradle/
 tomcat-log.txt
+tomcat-log.txt.lck
+.project
+.classpath
+.settings/

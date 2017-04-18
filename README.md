@@ -1,6 +1,6 @@
 # Tomcat: Invalid character Testing 
 
-Recent Tomcat 8.0.39, 8.5.7, 7.0.73 reject URLs that contain invalid characters.
+Recent Tomcat 8.0.39, 8.5.7, 7.0.73 raise an error when a URL contains invalid characters.
 
 http://stackoverflow.com/questions/41053653/tomcat-8-is-not-able-to-handle-get-request-with-in-query-parameters
 
